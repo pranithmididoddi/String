@@ -24,11 +24,31 @@ public class Solution {
     }
 
     public static void main(String[] args){
-        String str="hel'lo th:'is!@#$ is pranith";
-        /**using regular expressions and converting a string to character array*/
-        str=str.replaceAll("[^a-zA-Z0-9]","");
-        char[] ch=str.toCharArray();
-        System.out.println(Arrays.toString(ch));
-        /**[h, e, l, l, o, t, h, i, s, i, s, p, r, a, n, i, t, h]*/
+//        String str="hel'lo th:'is!@#$ is pranith";
+//        /**using regular expressions and converting a string to character array*/
+//        str=str.replaceAll("[^a-zA-Z0-9]","");
+//        char[] ch=str.toCharArray();
+//        System.out.println(Arrays.toString(ch));
+//        /**[h, e, l, l, o, t, h, i, s, i, s, p, r, a, n, i, t, h]*/
+
+        int string=345;
+        System.out.println(String.valueOf(string));
+
+
+
+    }
+
+    public boolean isPalindrome(String s) {
+
+        s=s.replaceAll("[^a-zA-Z0-9]","").toLowerCase();
+
+        char[] ch=s.toCharArray();
+
+        for(int i=0;i<ch.length;i++){
+            if(ch[i]!=ch[ch.length-1-i]){
+                return false;
+            }
+        }
+        return true;
     }
 }
