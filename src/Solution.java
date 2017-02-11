@@ -25,6 +25,7 @@ public class Solution {
 
     public static void main(String[] args){
         String str="hel'lo th:'is!@#$ is pranith";
+        /**using regular expressions and converting a string to character array*/
         str=str.replaceAll("[^a-zA-Z0-9]","");
         char[] ch=str.toCharArray();
         System.out.println(Arrays.toString(ch));
