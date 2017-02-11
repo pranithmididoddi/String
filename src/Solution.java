@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /**
  * Created by Pranith on 2/11/17.
  */
@@ -15,12 +17,17 @@ public class Solution {
         }
 
 
+
         if(sb.length()==0) return "";
 
     return sb.substring(0,sb.length()-1);
     }
 
     public static void main(String[] args){
-        System.out.println(reverse(""));
+        String str="hel'lo th:'is!@#$ is pranith";
+        str=str.replaceAll("[^a-zA-Z0-9]","");
+        char[] ch=str.toCharArray();
+        System.out.println(Arrays.toString(ch));
+        /**[h, e, l, l, o, t, h, i, s, i, s, p, r, a, n, i, t, h]*/
     }
 }
