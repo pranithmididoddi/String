@@ -184,5 +184,48 @@ public class Solution {
         return true;
     }
 
+    public String reverseVowels(String s) {
+
+        List<Character> list=new ArrayList<>();
+        list.add('a');
+        list.add('e');
+        list.add('i');
+        list.add('o');
+        list.add('u');
+        list.add('A');
+        list.add('E');
+        list.add('I');
+        list.add('O');
+        list.add('U');
+
+
+        char[] my=s.toCharArray();
+
+        int i=0,j=s.length()-1;
+
+        while(i<j){
+            if(!list.contains(my[i])){
+                i++;
+                continue;
+            }
+
+            if(!list.contains(my[j])){
+                j--;
+                continue;
+            }
+
+            char temp=my[i];
+            my[i]=my[j];
+            my[j]=temp;
+
+            i++;
+            j--;
+
+
+        }
+
+        return new String(my);
+
+    }
 
 }
