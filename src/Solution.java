@@ -352,5 +352,29 @@ public class Solution {
 
         return reverse.toString();
     }
+        /**Group Anagrams*/
+    public List<List<String>> groupAnagrams(String[] strs) {
+
+        Map<String, ArrayList<String>> map=new HashMap<>();
+
+        for(String str: strs){
+
+            char[] chars=str.toCharArray();
+            Arrays.sort(chars);
+            String result=new String(chars);
+
+            if(map.containsKey(result)){
+                map.get(result).add(str);
+            }else{
+                ArrayList<String> al=new ArrayList<>();
+                al.add(str);
+                map.put(result,al);
+            }
+        }
+        List<List<String>> list=new ArrayList<>();
+        list.addAll(map.values());
+
+        return list;
+    }
 
 }
