@@ -474,7 +474,56 @@ public class Solution {
             sb.deleteCharAt(sb.length() - 1);
         }
     }
+/**
+    if n=2
 
+    left=2;right=2;
+    result="(())",
+    __________
+| s=""	 |
+            | l=2	 |
+            | r=2	 |
+            | 		 |
+            |		 |
+            |________|
+            |
+    V
+            __________
+| s=(	 |
+            | l	1	 |
+            | r	2	 |
+            | 		 |
+            |		 |
+            |________|
+            |
+    V
+            __________
+| s=((	 |
+            | l	0	 |
+            | r	2	 |
+            | 		 |
+            |		 |
+            |________|
+            |
+    V
+            __________
+| s=(()	 |
+            | l	0	 |
+            | r	1	 |
+            | 		 |
+            |		 |
+            |________|
+            |
+    V
+            __________
+| s= (())|
+            | l=0	 |
+            | r=0	 |
+            | 		 |
+            |		 |
+            |________|
+            |
+    V*/
     public List<String> generateParenthesis(int n) {
         List<String> string=new ArrayList<>();
         String s="";
@@ -500,5 +549,6 @@ public class Solution {
             helper(string,s+")",left,right-1);
         }
     }
+
 
 }
