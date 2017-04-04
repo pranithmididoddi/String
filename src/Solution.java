@@ -550,5 +550,27 @@ public class Solution {
         }
     }
 
+    public static Map<String, Integer> pranithmididoddi(List<String> list){
+        Map<String, Integer> result=new LinkedHashMap<>();
+
+        for(String s : list){
+            String[] array=s.split(",");
+            String key=array[0];
+            int value=Integer.parseInt(array[1]);
+
+            if(result.get(key)==null){
+                result.put(key,value);
+            }else{
+                int prevval=result.get(key);
+                result.put(key,prevval+value);
+            }
+        }
+
+
+        return result;
+    }
+
+
+
 
 }
