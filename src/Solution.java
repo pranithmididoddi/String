@@ -570,7 +570,23 @@ public class Solution {
         return result;
     }
 
+    public static boolean palindrome(String s){
+        s=s.replaceAll("[^a-zA-Z]","").toLowerCase();
 
+        boolean flag=false;
+        //naman
+        int start=0;
+        int end=s.length()-1;
+        System.out.println(s);
+        while(start<end){
+            if(s.charAt(start)!=s.charAt(end)){
+                return false;
+            }
+            start++;
+            end--;
+        }
+        return true;
+    }
 
 
 }
